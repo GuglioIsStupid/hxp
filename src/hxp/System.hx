@@ -1619,10 +1619,7 @@ class System
 			devkitproToolsPath = "/opt/devkitpro/tools/bin";
 			devkitproSwitchPath = "/opt/devkitpro/libnx";
 		}
-		return [
-			"path" => devkitproPath,
-			"toolsPath" => devkitproToolsPath,
-			"switchPath" => devkitproSwitchPath
-		];
+
+		return [devkitproPath, devkitproToolsPath, devkitproSwitchPath];
 	}
 }
