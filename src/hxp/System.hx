@@ -1623,6 +1623,6 @@ class System
 			"path" => devkitproPath,
 			"toolsPath" => devkitproToolsPath,
 			"switchPath" => devkitproSwitchPath
-		]
+		];
 	}
 }
