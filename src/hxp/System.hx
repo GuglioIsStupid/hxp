@@ -1591,21 +1591,19 @@ class System
 			var devkitproSwitchPath = devkitpro.switchPath;
 			blehh returns an array with the path to the devkitpro folder, the path to the tools folder, and the path to the switch folder
 	 */
-	public static function findDevkitPro():String
+	// returns an array
+	public static function findDevkitPro():Array<Dynamic>
 	{
 		var devkitproPath = "";
 		var devkitproToolsPath = "";
 		var devkitproSwitchPath = "";
-
 		if (hostPlatform == WINDOWS)
 		{
 			var devkitproPath = Sys.getEnv("DEVKITPRO");
-
 			if (devkitproPath == null)
 			{
 				devkitproPath = "C:/devkitPro";
 			}
-
 			devkitproToolsPath = Path.combine(devkitproPath, "tools/bin");
 			devkitproSwitchPath = Path.combine(devkitproPath, "libnx");
 		}
@@ -1621,7 +1619,6 @@ class System
 			devkitproToolsPath = "/opt/devkitpro/tools/bin";
 			devkitproSwitchPath = "/opt/devkitpro/libnx";
 		}
-
 		return {path: devkitproPath, toolsPath: devkitproToolsPath, switchPath: devkitproSwitchPath};
 	}
 }
