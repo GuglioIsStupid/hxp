@@ -1620,7 +1620,7 @@ class System
 			devkitproSwitchPath = "/opt/devkitpro/libnx";
 		}
 
-		return new Map<String, String>([
+		return new Map<String, String, String>([
 			"devkitproPath" => devkitproPath,
 			"devkitproToolsPath" => devkitproToolsPath,
 			"devkitproSwitchPath" => devkitproSwitchPath
