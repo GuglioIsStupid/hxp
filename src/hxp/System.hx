@@ -1589,10 +1589,10 @@ class System
 			var devkitproPath = devkitpro.path;
 			var devkitproToolsPath = devkitpro.toolsPath;
 			var devkitproSwitchPath = devkitpro.switchPath;
-			blehh returns a dict with the path to the devkitpro folder, the path to the tools folder, and the path to the switch folder
+			blehh returns a array with the path to the devkitpro folder, the path to the tools folder, and the path to the switch folder
 	 */
-	// returns a dict of paths to the devkitpro folder, the tools folder, and the switch folder
-	public static function findDevkitPro():Map<String, String>
+	// returns a array of paths to the devkitpro folder, the tools folder, and the switch folder
+	public static function findDevkitPro():Array<String>
 	{
 		var devkitproPath = "";
 		var devkitproToolsPath = "";
@@ -1619,11 +1619,10 @@ class System
 			devkitproToolsPath = "/opt/devkitpro/tools/bin";
 			devkitproSwitchPath = "/opt/devkitpro/libnx";
 		}
-
-		return new Map<String, String, String>([
-			"devkitproPath" => devkitproPath,
-			"devkitproToolsPath" => devkitproToolsPath,
-			"devkitproSwitchPath" => devkitproSwitchPath
-		]);
+		return [
+			"path" => devkitproPath,
+			"toolsPath" => devkitproToolsPath,
+			"switchPath" => devkitproSwitchPath
+		]
 	}
 }
